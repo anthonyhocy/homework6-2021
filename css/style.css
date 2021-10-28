@@ -32,13 +32,15 @@ header{
     border: #45ADAD solid 2px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-radius: 7px 0px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 } 
 
 .pricing {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .gallery {
@@ -101,8 +103,8 @@ header{
 @media screen and (prefers-reduced-motion: reduce) {
     #logo {
         animation-name: logo_grow;
-        animation-duration: 0; 
-        transition-duration: 0;
+        animation-duration: 0s; 
+        transition-duration: 0s;
         animation-iteration-count: 0;
     }
 }
