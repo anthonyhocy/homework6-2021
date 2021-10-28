@@ -19,7 +19,7 @@ header{
     justify-content: center;
 }
 
-.nav_item a, a:visited{
+a:visited{
     color: #50C7C7;
 }
 
@@ -114,22 +114,17 @@ header{
         background-image: none;
     }
 
-    header {
-        display: flex;
-        flex-direction: column;
+    nav {
         width: 100%;
-        justify-content: center;
-        align-items: center;
     }
-
+    
     .nav_links{
-        display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        width: 100%;
     }
 
     .pricing {
-        display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: flex-end;
