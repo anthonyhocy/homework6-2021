@@ -1,0 +1,158 @@
+body{
+    font-family: 'Alegreya Sans SC', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav_item a, a:visited{
+    color: #50C7C7;
+}
+
+.card{
+    flex-basis: 450px;
+}
+
+.card header {
+    background-color: #288088;
+    border: #45ADAD solid 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 7px 0px;
+} 
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    border: #50C7C7 10px solid;
+    margin: 10px;
+    width: 300px;
+}
+
+#logo {
+    animation-name: logo_animation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo_animation{
+    from {
+        width: 50px;
+        opacity: 0;
+    }
+
+    to{
+        width: 425px;
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 850px){
+    header {    
+        position: fixed;
+        flex-direction: row;
+        justify-content:space-between;
+        overflow: auto;
+        width: 100%
+    }
+
+    .nav_links {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 250px;   
+    }
+    
+    .pricing header {
+        position: static;
+    }
+
+}
+
+
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation-name: logo_grow;
+        animation-duration: 0; 
+        transition-duration: 0;
+        animation-iteration-count: 0;
+    }
+}
+
+@media print {
+    body {
+        background-image: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .pricing {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    .card header {
+        position: static;
+    }
+
+    .card {
+        flex-basis: 250px;
+        border: 2px solid #45ADDD;
+    }
+
+    #gallery, .gallery{
+        display: none;
+    }
+
+    .card ul li:nth-child(odd):before{
+        content: "👍";
+    }
+    
+    .card ul li:nth-child(even):after{
+        content: "👍";
+    }
+
+}
